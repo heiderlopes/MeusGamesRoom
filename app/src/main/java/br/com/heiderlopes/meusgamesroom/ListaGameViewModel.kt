@@ -6,13 +6,13 @@ import android.arch.lifecycle.LiveData
 import br.com.heiderlopes.meusgamesroom.dao.BancoDeDados
 import br.com.heiderlopes.meusgamesroom.model.Game
 
-class ListaGameViewModel(application:Application):AndroidViewModel(application) {
-
-    lateinit var games:LiveData<List<Game>>
+class ListaGameViewModel(application: Application) : AndroidViewModel(application) {
 
     private val bd: BancoDeDados = BancoDeDados.getDatabase(application.applicationContext)!!
 
-    init{
+    lateinit var games: LiveData<List<Game>>
+
+    init {
         carregarDados()
     }
 

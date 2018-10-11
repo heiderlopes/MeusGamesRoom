@@ -25,7 +25,7 @@ class GameAdapter(var games: List<Game>) : RecyclerView.Adapter<GameAdapter.Game
     override fun onBindViewHolder(holder: GameViewHolder, i: Int) {
         val game = games[i]
         holder.tvGame.text = game.nome
-        holder.tvPlataforma.text = game.plataforma
+        //holder.tvPlataforma.text = game.generoId
     }
 
     class GameViewHolder(v: View) : RecyclerView.ViewHolder(v) {
